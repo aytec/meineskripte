@@ -81,7 +81,7 @@ function update_script() {
     cd ~ && rm -rf vaultwarden
     git clone https://github.com/dani-garcia/vaultwarden &>/dev/null
     cd vaultwarden
-    cargo build --features "sqlite,mysql,postgresql" --release &>/dev/null
+    cargo build --features "sqlite" --release &>/dev/null
     DIR=/usr/bin/vaultwarden
     if [ -d "$DIR" ]; then
       cp target/release/vaultwarden /usr/bin/
